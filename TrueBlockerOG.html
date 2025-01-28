@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Fraud Prevention</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Banking Fraud Prevention</h1>
+        
+        <form id="fraudForm">
+            <label for="location">Enter Transaction Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter city or location" required>
+
+            <label for="upiId">Enter Recipient UPI ID:</label>
+            <input type="text" id="upiId" name="upiId" placeholder="Recipient's UPI ID" required>
+
+            <label for="transactionTime">Enter Transaction Time:</label>
+            <input type="datetime-local" id="transactionTime" name="transactionTime" required>
+
+            <label for="previousTransactions">Enter Previous Transaction Details (JSON format):</label>
+            <textarea id="previousTransactions" name="previousTransactions" rows="5" placeholder='Example: [{"amount":5000}, {"amount":12000}]' required></textarea>
+
+            <button type="submit">Submit Transaction</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
